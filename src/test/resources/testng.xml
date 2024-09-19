@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Login-Medsys-perf2">
+        <classes>
+            <class name="com.medsys.login.Login">
+                <methods>
+                    <include name="lunchBrowser"></include>
+                    <include name="login"></include>
+                    <include name="closeBrowser"></include>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test preserve-order="true" name="Login-MedsysURL-perf2">
+        <classes>
+            <class name="com.medsys.login.Login">
+                <methods>
+                    <include name="lunchBrowser"></include>
+                    <include name="login"></include>
+                    <include name="url"></include>
+                    <include name="credential"></include>
+                    <include name="closeBrowser"></include>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test preserve-order="true" name="Login-MedsysRPM-perf2">
+        <classes>
+            <class name="com.medsys.login.Login">
+                <methods>
+                    <include name="lunchBrowser"></include>
+                    <include name="login"></include>
+                    <include name="url"></include>
+                    <include name="credential"></include>
+                    <include name="rpm"></include>
+                    <include name="closeBrowser"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

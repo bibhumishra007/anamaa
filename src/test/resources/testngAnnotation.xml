@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Login-Medsys-perf2">
+        <classes>
+            <class name="com.medsys.login.LoginAnnotation">
+                <methods>
+                    <include name="lunchBrowser"></include>
+                    <include name="tearDown"></include>
+                    <include name="url"></include>
+                    <include name="login"></include>
+                    <include name="rpm"></include>
+                    <include name="logout"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
