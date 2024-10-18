@@ -13,13 +13,15 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
 import static org.testng.Assert.assertEquals;
 
-public class LoginAnnotation {
+public class LoginAnnotation<XSSFWorkbook> {
 
     public String baseUrl;
     public String rpmUrl;
@@ -59,6 +61,28 @@ public class LoginAnnotation {
           assertEquals(ExpUrl, ActUrl);
           Thread.sleep(2000);
     }
+
+//    @Test
+//    public <XSSFSheet> void readSpecificData(){
+//        String path = "C:\\Selenium_ReadTestData.xlsx";
+//        try {
+//            //Create an object of FileInputStream class to read excel file
+//            FileInputStream fis = new FileInputStream(path);
+//
+//            //Create object of XSSFWorkbook class
+//            XSSFWorkbook wb = new XSSFWorkbook(fis);
+//
+//            //Read excel sheet by sheet name
+//            XSSFSheet sheet1 = wb.getSheet("Read_TestData");
+//
+//            //Get data from specified cell
+//            //System.out.println(sheet1.getClass(1).getCell(1).getStringCellValue());
+//            //System.out.println(sheet1.getClass(3).getCell(0).getStringCellValue());
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     @Test
     public void login() throws InterruptedException {
